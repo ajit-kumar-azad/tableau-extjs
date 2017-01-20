@@ -15,7 +15,7 @@ Ext.define('tableau.view.main.Main', {
 
         'tableau.view.main.MainController',
         'tableau.view.main.MainModel',
-        'tableau.view.main.Tableau'
+        'tableau.view.main.TableauNExt'
     ],
 
     controller: 'main',
@@ -79,7 +79,7 @@ Ext.define('tableau.view.main.Main', {
         title: 'Home',
         iconCls: 'fa-home',
         items: [{
-            xtype: 'tableau'
+            xtype: 'tableaunext'
         }]
     }]
 });
