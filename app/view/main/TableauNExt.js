@@ -66,10 +66,6 @@ Ext.define('tableau.view.main.TableauNExt', {
         }]
     }],
 
-    viz: null,
-    workbook: null,
-    activeSheet: null,
-
     filterSingleValue: function(cmp, newVal) {
       this.down('tableauviz').setRegionFilterTxt(newVal);
     },

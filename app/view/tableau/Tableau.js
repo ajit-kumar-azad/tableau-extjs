@@ -1,13 +1,7 @@
 Ext.define('tableau.view.tableau.Tableau', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.Component',
 
     xtype: 'tableauviz',
-
-    items: [{
-            xtype: 'component',
-            flex: 1,
-            html: '<div style="height:1200px; width:1200px"></div>'
-        }],
 
     privates: {
       viz: null,
@@ -41,7 +35,7 @@ Ext.define('tableau.view.tableau.Tableau', {
 
         var me = this;
 
-        var placeholderDiv = me.down('component').getEl().selectNode('div');
+        var placeholderDiv = me.getEl().dom;
         var url = this.getVizUrl();
 
         var options = Ext.apply(this.getOptions() , {
