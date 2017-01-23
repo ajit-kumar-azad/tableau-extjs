@@ -3,20 +3,16 @@ Ext.define('tableau.view.tableau.Tableau', {
 
     xtype: 'tableauviz',
 
-    privates: {
-      viz: null,
-      workbook: null,
-      activeSheet: null
-    },
+    viz: null,
+    workbook: null,
+    activeSheet: null,
 
     config: {
       regionFilterTxt: '',
       vizUrl: '',
       options: {
-            width: "800px",
-            height: "400px",
-            hideTabs: true,
-            hideToolbar: true
+          hideTabs: true,
+          hideToolbar: true
       }
     },
 
@@ -26,6 +22,20 @@ Ext.define('tableau.view.tableau.Tableau', {
         "Region",
         newVal,
         (newVal !== "") ? tableauSoftware.FilterUpdateType.REPLACE : tableauSoftware.FilterUpdateType.ALL);
+      }
+    },
+
+    onBoxReady: function(width, height){
+
+      this.setOptions(Ext.apply(this.getOptions(), {
+        width: width,
+        height: height
+      }));
+    },
+
+    onResize: function(width, height) {
+      if (this.activeSheet) {
+        this.viz.setFrameSize(width, height);
       }
     },
 
