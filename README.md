@@ -7,4 +7,4 @@ A sample Ext JS application with two-way interaction with Tableau visualization
 3. Run `sencha app refresh` and run `sench app watch` to run the application
 4. Access `http://localhost:1841/` in a browser to access the application
 
-![Tableau Ext JS](resources/tableau-extjs-sample.gif)
+![Tableau Ext JS](resources/tableau-with-extjs.gif)
